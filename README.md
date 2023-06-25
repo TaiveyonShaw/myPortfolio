@@ -3,7 +3,7 @@ This is my personal portfolio website.
 
 Let me know if there are things I could improve on :)
 
-Note: Portfolio section is for future purpose, therefore, it is only there for aesthetic purposes currently.
+**Note:** Portfolio section is for future purpose, therefore, it is only there for aesthetic purposes currently.
 
  ## Current Bugs:
  - Space at the bottom (desktop)
