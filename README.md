@@ -1,6 +1,11 @@
 # My Portfolio Website
+This is my personal portfolio website.
 
-## HOW TO RUN LOCAL SERVER USING NODE.JS
-- npm install http-server -g
-- http-server or npx http-server
-- On your browser, type localhost:8080
+Note: Portfolio section is for future purpose, therefore, it is only there for aesthetic purposes currently.
+
+ ## Current Bugs:
+ - Space at the bottom (desktop)
+ - The current project section is formatted incorrectly. Image and text on one side instead of separate (mobile)
+
+ ## Things to consider:
+ - Remove percentages and bars from skills section.
