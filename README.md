@@ -12,3 +12,4 @@ Let me know if there are things I could improve on :)
  ## Things to consider:
  - Remove percentages and bars from skills section.
  - Add socials(kaggle/leetcode/etc.)
+ - When Removing the percentages and bars, could replace with images of the languages and frameworks.
