@@ -11,3 +11,4 @@ Let me know if there are things I could improve on :)
 
  ## Things to consider:
  - Remove percentages and bars from skills section.
+ - Add socials(kaggle/leetcode/etc.)
