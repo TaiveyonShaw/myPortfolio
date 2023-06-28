@@ -7,3 +7,4 @@ Let me know if there are things I could improve on :)
 
  ## Things to consider:
  - Add socials(kaggle/leetcode/etc.)
+ - Add descriptions for work
