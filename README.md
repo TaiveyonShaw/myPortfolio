@@ -5,8 +5,5 @@ Let me know if there are things I could improve on :)
 
 **Note:** Portfolio section is for future purpose, therefore, it is only there for aesthetic purposes currently.
 
- ## Current Bugs:
- -
-
  ## Things to consider:
  - Add socials(kaggle/leetcode/etc.)
