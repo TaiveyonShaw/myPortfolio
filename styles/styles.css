@@ -483,7 +483,6 @@ img {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
 }
 
 .skills__name:hover {
@@ -595,8 +594,6 @@ img {
   padding: 1.5rem;
   border-radius: .5rem;
 }
-
-
 
 .qualification [data-content]{
   display: none;
