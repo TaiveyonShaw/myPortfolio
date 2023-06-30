@@ -69,6 +69,28 @@ tabs.forEach(tab => {
   })
 })
 
+const modalViews = document.querySelectorAll('.qualification__modal'),
+      modalBtns = document.querySelectorAll('.qualification__modal-button'),
+      modalCloses = document.querySelectorAll('.qualification__modal-close')
+
+let modal = function(modalClick) {
+  modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener('click', () => {
+    modal(i)
+  })
+})
+
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener('click', () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove('active-modal')
+    })
+  })
+})
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper('.portfolio__container', {
   cssMode: true,

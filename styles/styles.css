@@ -394,6 +394,17 @@ img {
 .button--small{
   padding: .75rem 1rem;
 }
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
 /*==================== ABOUT ====================*/
 .about__img{
   width: 200px;
@@ -583,8 +594,8 @@ img {
   justify-content: center;
   padding: 0 1rem;
   z-index: var(--z-modal);
-  /* opacity: 0; */
-  /* visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
   transition: .3s;
 }
 
@@ -595,6 +606,42 @@ img {
   border-radius: .5rem;
 }
 
+.qualification__modal-qualifications {
+  row-gap: 1rem;
+}
+
+.qualification__modal-qualification {
+  display: flex;
+}
+
+.qualification__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.qualification__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.qualification__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
+.qualification__modal-button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+.qualification__modal-button:hover .button__icon {
+  transform: translateX(.25rem);
+}
 .qualification [data-content]{
   display: none;
 }
@@ -605,6 +652,12 @@ img {
 
 .qualification__button.qualification__active{
   color: var(--first-color);
+}
+
+/* Active Modal */
+.active-modal{
+  opacity: 1;
+  visibility: visible;
 }
 
 /*==================== PORTFOLIO ====================*/
