@@ -606,6 +606,7 @@ img {
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: .5rem;
+  max-width: 768px;
 }
 
 .qualification__modal-qualifications {
