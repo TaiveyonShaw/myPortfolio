@@ -19,6 +19,9 @@
     <!--==================== Website Icon ====================-->
     <link rel="icon" href="images/Koala.png">
 
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
     <title>Tai'veyon Shaw</title>
   </head>
   <body>
@@ -820,29 +823,65 @@
         <span class="section__subtitle">Get in touch</span>
 
         <div class="contact__container container grid">
+            <div class="contact__content">
+              <h3 class="contact__title">
+                <i class="ri-information-line"></i> 
+                My Contact Info
+              </h3>
+                <!--==================== CONTACT INFO 1 ====================-->
+                <div class="contact__information">
+                  <i class="uil uil-phone contact__icon"></i>
+                  <div class="contact__description">
+                    <a href="tel: 360-720-0530">
+                    <h3 class="contact__title-name">Phone Number</h3>
+                      <span class="contact__subtitle"> +1 (360) 720-0530</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <!--==================== CONTACT INFO 2 ====================-->
+                <div class="contact__information">
+                  <i class="uil uil-envelope contact__icon"></i>
+                  <div class="contact__description">
+                    <a href="mailto: taiveyonshaw@gmail.com">
+                    <h3 class="contact__title-name">E-mail</h3>
+                      <span class="contact__subtitle">taiveyonshaw@gmail.com</span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="contact__content">
+              <h3 class="contact__title">
+                  <i class="ri-chat-3-line"></i>
+                  Contact Me!
+              </h3>
 
-            <!--==================== CONTACT INFO 1 ====================-->
-            <div class="contact__information">
-              <i class="uil uil-phone contact__icon"></i>
-              <div class="contact__description">
-                <a href="tel:360-720-0530">
-                <h3 class="contact__title">Phone Number</h3>
-                  <span class="contact__subtitle">360-720-0530</span>
-                </a>
-              </div>
-            </div>
-            
-            <!--==================== CONTACT INFO 2 ====================-->
-            <div class="contact__information">
-              <i class="uil uil-envelope contact__icon"></i>
-              <div class="contact__description">
-                <a href="mailto: taiveyonshaw@gmail.com">
-                <h3 class="contact__title">E-mail</h3>
-                  <span class="contact__subtitle">taiveyonshaw@gmail.com</span>
-                </a>
-              </div>
-            </div>
-            
+              <form action="" class="contact__form" id="contact-form">
+                 
+                 <div class="contact__form-div">
+                    <label class="contact__form-tag">Name</label>
+                       <input type="text" name="user_name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
+                 </div>
+                 
+                 <div class="contact__form-div">
+                    <label class="contact__form-tag">E-mail</label>
+                       <input type="text" name="user_email" required placeholder="Write your email" class="contact__form-input" id="contact-email">
+                 </div>
+
+                 <div class="contact__form-div contact__form-area">
+                    <label class="contact__form-tag">Question</label>
+                    <textarea name="user_question" placeholder="Send us a message" id="contact-question" class="contact__form-input"></textarea>
+                 </div>
+
+                 <p class="contact__message" id="contact-message"></p>
+
+                 <button type="submit" class="contact__button">
+                    Submit <i class="ri-arrow-right-up-line"></i>
+                 </button>
+              </form>
+           </div>
+
         </div>
       </section>
     </main>
@@ -896,5 +935,9 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="components/main.js"></script>
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
   </body>
 </html>
