@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 230;
+  --hue-color: 225;
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -407,12 +407,20 @@ img {
   background-color: transparent;
   color: var(--first-color-alt);
 }
+
 /*==================== ABOUT ====================*/
 .about__img{
   width: 200px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
+}
+
+.about__title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .about__description{
@@ -422,7 +430,7 @@ img {
 
 .about__info{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: var(--mb-2-5);
 }
 
