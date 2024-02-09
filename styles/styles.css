@@ -7,10 +7,11 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 225;
+  --hue-color: 220;
 
   /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color: hsl(var(--hue-color), 69%, 55%);
+  --first-color-active: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -263,7 +264,7 @@ img {
 
 /* Active link */
 .active-link{
-  color: var(--first-color);
+  color: var(--first-color-active);
 }
 /* Change background header */
 .scroll-header{
@@ -1012,7 +1013,7 @@ img {
 /*========== SCROLL UP ==========*/
 .scrollup{
   position: fixed;
-  right: 1rem;
+  right: 4rem;
   bottom: -20%;
   background-color: hsl(var(--hue-color), 69%, 56%);
   opacity: .8;
@@ -1137,7 +1138,7 @@ img {
   }
 
   .section{
-    padding: 6rem 0 2rem;
+    padding: 6rem 0 12rem;
   }
 
   .section__subtitle{
@@ -1157,7 +1158,7 @@ img {
 
   .nav{
     height: calc(var(--header-height) + 1.5rem);
-    column-gap: 1rem;
+    column-gap: 1.5rem;
   }
 
   .nav__icon,
@@ -1194,10 +1195,11 @@ img {
 
   .home__scroll{
     display: block;
+    justify-self: center;
   }
 
-  .home__scroll-button{
-    margin-left: 3rem;
+  .home__scroll-button {
+    margin: 12rem 0 1rem;
   }
   
   .about__container{
