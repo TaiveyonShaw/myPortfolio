@@ -141,6 +141,7 @@ function scrollUp(){
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
+
 window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME ====================*/
@@ -172,7 +173,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
 
 /*=============== E-MAIL JS ===============*/
 const contactForm = document.getElementById('contact-form'),
@@ -214,4 +214,5 @@ const sendEmail = (e) => {
         contactQuestion.value = ''
     }
 }
+
 contactForm.addEventListener('submit', sendEmail)
