@@ -410,6 +410,9 @@ img {
 }
 
 /*==================== ABOUT ====================*/
+.about {
+  padding-top: 10rem;
+}
 .about__img{
   width: 200px;
   border-radius: .5rem;
@@ -1138,9 +1141,12 @@ img {
   }
 
   .section{
-    padding: 6rem 0 12rem;
+    padding: 6rem 0 2rem;
   }
 
+  .skills {
+    padding-top: 5rem;
+  }
   .section__subtitle{
     margin-bottom: 4rem;
   }
@@ -1201,11 +1207,19 @@ img {
   .home__scroll-button {
     margin: 12rem 0 1rem;
   }
+
+  .about{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
   
   .about__container{
     column-gap: 5rem;
   }
 
+  .about__buttons {
+    text-align: center;
+  }
   .about__img{
     width: 350px;
   }
