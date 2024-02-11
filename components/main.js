@@ -1,218 +1,243 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+	navToggle = document.getElementById("nav-toggle"),
+	navClose = document.getElementById("nav-close");
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
 if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
+	navToggle.addEventListener("click", () => {
+		navMenu.classList.add("show-menu");
+	});
 }
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
+	navClose.addEventListener("click", () => {
+		navMenu.classList.remove("show-menu");
+	});
 }
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove("show-menu");
+	const navMenu = document.getElementById("nav-menu");
+	// When we click on each nav__link, we remove the show-menu class
+	navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName("skills__content"),
+	skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
-  let itemClass = this.parentNode.className
+	let itemClass = this.parentNode.className;
 
-  for (let i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = 'skills__content skills__close'
-  }
+	for (let i = 0; i < skillsContent.length; i++) {
+		skillsContent[i].className = "skills__content skills__close";
+	}
 
-  if (itemClass === 'skills__content skills__close') {
-    this.parentNode.className = 'skills__content skills__open'
-  }
+	if (itemClass === "skills__content skills__close") {
+		this.parentNode.className = "skills__content skills__open";
+	}
 }
 
 skillsHeader.forEach((el) => {
-  el.addEventListener('click', toggleSkills)
-})
+	el.addEventListener("click", toggleSkills);
+});
 
 /*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+const tabs = document.querySelectorAll("[data-target]"),
+	tabContents = document.querySelectorAll("[data-content]");
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.target)
+tabs.forEach((tab) => {
+	tab.addEventListener("click", () => {
+		const target = document.querySelector(tab.dataset.target);
 
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('qualification__active')
-    })
-    target.classList.add('qualification__active')
+		tabContents.forEach((tabContent) => {
+			tabContent.classList.remove("qualification__active");
+		});
+		target.classList.add("qualification__active");
 
-    tabs.forEach(tab => {
-      tab.classList.remove('qualification__active')
-    })
-    tab.classList.add('qualification__active')
-  })
-})
+		tabs.forEach((tab) => {
+			tab.classList.remove("qualification__active");
+		});
+		tab.classList.add("qualification__active");
+	});
+});
 
-const modalViews = document.querySelectorAll('.qualification__modal'),
-      modalBtns = document.querySelectorAll('.qualification__modal-button'),
-      modalCloses = document.querySelectorAll('.qualification__modal-close')
+const modalViews = document.querySelectorAll(".qualification__modal"),
+	modalBtns = document.querySelectorAll(".qualification__modal-button"),
+	modalCloses = document.querySelectorAll(".qualification__modal-close");
 
-let modal = function(modalClick) {
-  modalViews[modalClick].classList.add('active-modal')
-}
+let modal = function (modalClick) {
+	modalViews[modalClick].classList.add("active-modal");
+};
 
 modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener('click', () => {
-    modal(i)
-  })
-})
+	modalBtn.addEventListener("click", () => {
+		modal(i);
+	});
+});
 
 modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener('click', () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove('active-modal')
-    })
-  })
-})
+	modalClose.addEventListener("click", () => {
+		modalViews.forEach((modalView) => {
+			modalView.classList.remove("active-modal");
+		});
+	});
+});
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container', {
-  cssMode: true,
-  loop: true,
+let swiper = new Swiper(".portfolio__container", {
+	cssMode: true,
+	loop: true,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
 });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll("section[id]");
 
-function scrollActive(){
-    const scrollY = window.scrollY
+function scrollActive() {
+	const scrollY = window.scrollY;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        let sectionId = current.getAttribute('id')
+	sections.forEach((current) => {
+		const sectionHeight = current.offsetHeight;
+		const sectionTop = current.offsetTop - 50;
+		let sectionId = current.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			document
+				.querySelector(".nav__menu a[href*=" + sectionId + "]")
+				.classList.add("active-link");
+		} else {
+			document
+				.querySelector(".nav__menu a[href*=" + sectionId + "]")
+				.classList.remove("active-link");
+		}
+	});
 }
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener("scroll", scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader(){
-  const nav = document.getElementById('header')
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-  if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+function scrollHeader() {
+	const nav = document.getElementById("header");
+	// When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+	if (this.scrollY >= 80) nav.classList.add("scroll-header");
+	else nav.classList.remove("scroll-header");
 }
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener("scroll", scrollHeader);
 
 /*==================== SHOW SCROLL UP ====================*/
-function scrollUp(){
-  const scrollUp = document.getElementById('scroll-up');
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+function scrollUp() {
+	const scrollUp = document.getElementById("scroll-up");
+	// When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+	if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
+	else scrollUp.classList.remove("show-scroll");
 }
 
-window.addEventListener('scroll', scrollUp)
+window.addEventListener("scroll", scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "uil-sun";
 
 // Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+const getCurrentTheme = () =>
+	document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+	themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+	// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+	document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+		darkTheme
+	);
+	themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+		iconTheme
+	);
 }
 
 // Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+themeButton.addEventListener("click", () => {
+	// Add or remove the dark / icon theme
+	document.body.classList.toggle(darkTheme);
+	themeButton.classList.toggle(iconTheme);
+	// We save the theme and the current icon that the user chose
+	localStorage.setItem("selected-theme", getCurrentTheme());
+	localStorage.setItem("selected-icon", getCurrentIcon());
+});
 
 /*=============== E-MAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-      contactName = document.getElementById('contact-name'),
-      contactEmail = document.getElementById('contact-email'),
-      contactQuestion = document.getElementById('contact-question'),
-      contactMessage = document.getElementById('contact-message')
+const contactForm = document.getElementById("contact-form"),
+	contactName = document.getElementById("contact-name"),
+	contactEmail = document.getElementById("contact-email"),
+	contactQuestion = document.getElementById("contact-question"),
+	contactMessage = document.getElementById("contact-message");
 
 const sendEmail = (e) => {
-  e.preventDefault()
+	e.preventDefault();
 
-  // Check if the field has a value
-  if (contactName.value === '' || contactEmail.value === '' || contactQuestion.value === '') {
-    // Add and remove color
-    contactMessage.classList.remove('color-blue')
-    contactMessage.classList.add('color-red')
-     
-    // Show message
-    contactMessage.textContent = 'Write all the input fields'
-  } else {
-    // serviceID - tempplateID - #form - publickey
-      emailjs.sendForm('service_pbgogy2','template_euqmqp5','#contact-form','LhPYqc50RPtnsxfj4' )
-        .then(() => {
-          // Show message and add color
-          contactMessage.classList.add('color-blue')
-          contactMessage.textContent = 'Message Sent'
+	// Check if the field has a value
+	if (
+		contactName.value === "" ||
+		contactEmail.value === "" ||
+		contactQuestion.value === ""
+	) {
+		// Add and remove color
+		contactMessage.classList.remove("color-blue");
+		contactMessage.classList.add("color-red");
 
-          // Remove message after five seconds
-          setTimeout(() => {
-            contactMessage.textContent = ''
-          }, 5000)
-        }, (error) => {
-          alert('Something has failed...', error)
-        })
+		// Show message
+		contactMessage.textContent = "Write all the input fields";
+	} else {
+		// serviceID - tempplateID - #form - publickey
+		emailjs
+			.sendForm(
+				"service_pbgogy2",
+				"template_euqmqp5",
+				"#contact-form",
+				"LhPYqc50RPtnsxfj4"
+			)
+			.then(
+				() => {
+					// Show message and add color
+					contactMessage.classList.add("color-blue");
+					contactMessage.textContent = "Message Sent";
 
-        // To clear the input field
-        contactName.value = ''
-        contactEmail.value = ''
-        contactQuestion.value = ''
-    }
-}
+					// Remove message after five seconds
+					setTimeout(() => {
+						contactMessage.textContent = "";
+					}, 5000);
+				},
+				(error) => {
+					alert("Something has failed...", error);
+				}
+			);
 
-contactForm.addEventListener('submit', sendEmail)
+		// To clear the input field
+		contactName.value = "";
+		contactEmail.value = "";
+		contactQuestion.value = "";
+	}
+};
+
+contactForm.addEventListener("submit", sendEmail);
