@@ -24,6 +24,9 @@
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
+	/* ========== Box Shadow Coloring ========== */
+	--box-shadow-color: 0 -1px 10px 3px rgba(0, 0, 0, 0.3);
+
 	/*========== Font and typography ==========*/
 	--body-font: "Poppins", sans-serif;
 
@@ -81,6 +84,7 @@ body.dark-theme {
 	--container-color: hsl(var(--hue-color), 29%, 16%);
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+	--box-shadow-color: 0 -1px 10px 3px rgba(255, 255, 255, 0.3);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -268,7 +272,7 @@ img {
 }
 /* Change background header */
 .scroll-header {
-	box-shadow: 0 -1px 10px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: var(--box-shadow-color);
 }
 
 /*==================== HOME ====================*/
@@ -773,7 +777,6 @@ img {
 }
 
 .project__img {
-	justify-self: center;
 	border-radius: 1rem;
 }
 
@@ -788,7 +791,6 @@ img {
 }
 
 .contact__icon {
-	font-size: 2rem;
 	color: var(--first-color);
 	margin-right: var(--mb-0-75);
 }
@@ -801,6 +803,13 @@ img {
 .contact__subtitle {
 	font-size: var(--small-font-size);
 	color: var(--text-color-light);
+}
+
+.contactTitleSection {
+	display: flex;
+	margin-bottom: 0.5rem;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .contact__description:hover {
@@ -828,7 +837,6 @@ img {
 	column-gap: 0.5rem;
 	font-size: var(--small-font-size);
 	font-weight: var(--font-semi-bold);
-	margin-bottom: 2.5rem;
 }
 
 .contact__title i {
@@ -939,6 +947,11 @@ img {
 	font-weight: initial;
 }
 
+.contactFooterTitle {
+	font-weight: 200;
+	margin-bottom: 0.5rem;
+}
+
 .contact__message {
 	font-size: var(--small-font-size);
 	position: absolute;
@@ -955,17 +968,20 @@ img {
 	color: hsl(207, 56%, 45%);
 }
 
+.white {
+	color: #fff;
+}
 /*==================== FOOTER ====================*/
 .footer {
 	padding-top: 1rem;
 }
 
 .footer__container {
-	row-gap: 3.5rem;
+	gap: 4rem;
 }
 
 .footer__bg {
-	background-color: var(--first-color-second);
+	background-color: hsl(var(--hue-color), 30%, 8%);
 	padding: 2rem 0 3rem;
 }
 
@@ -1116,7 +1132,6 @@ img {
 	.about__container,
 	.skills__container,
 	.portfolio__content,
-	.contact__container,
 	.footer__container {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -1229,6 +1244,7 @@ img {
 		padding: 1rem;
 		box-shadow: 0 6px 10px 3px rgba(0, 0, 0, 0.3);
 		border-radius: 1rem;
+		background-color: var(--container-color);
 	}
 
 	.about__info {
@@ -1289,11 +1305,10 @@ img {
 		border-radius: 1rem;
 		padding: 3rem 2.5rem 0;
 		grid-template-columns: 1fr max-content;
-		column-gap: 3rem;
 	}
 
 	.project__data {
-		padding-top: 0.8rem;
+		text-align: center;
 	}
 
 	.footer__container {
@@ -1314,7 +1329,7 @@ img {
 	}
 
 	.footer__copy {
-		margin-top: 4.5rem;
+		margin-top: 1rem;
 	}
 }
 
