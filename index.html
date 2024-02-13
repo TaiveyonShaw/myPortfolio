@@ -137,7 +137,8 @@
 								Web Developer and Machine Learning Enthusiast!
 							</p>
 							<a href="#contact" class="button button--flex">
-								Contact Me <i class="uil uil-envelope-alt button__icon"></i>
+								Contact Me
+								<i class="uil ri-arrow-right-up-line button__icon"></i>
 							</a>
 						</div>
 					</div>
@@ -391,7 +392,7 @@
 
 				<!--==================== SKILLS ====================-->
 				<div class="skills">
-					<h2 class="section__title">Technical Skills</h2>
+					<h2 class="section__title technicalTitle">Technical Skills</h2>
 					<span class="section__subtitle">Languages and Frameworks</span>
 
 					<div class="skills__container container grid">
@@ -901,28 +902,44 @@
 						<div class="portfolio__content grid swiper-slide">
 							<img
 								src="/images/churchwebsite.png"
-								alt=""
+								alt="Church Website Image"
 								class="portfolio__img"
 							/>
 
 							<div class="portfolio__data">
 								<h3 class="portfolio__title">YICC Website</h3>
 								<p class="portfolio__description">
-									A website for my local church made to be adatable to all
+									A website for my local church made to be adaptable to all
 									devices.
 								</p>
-								<a
-									href="https://www.yicc.church"
-									class="button button--flex button--small portfolio__button"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Check it out!
-									<i class="uil uil-arrow-right button__icon"></i>
-								</a>
+								<div class="portfolioButtons">
+									<a
+										href="https://www.yicc.church"
+										class="button button--flex button--small portfolio__button"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i
+											class="uil uil-desktop-cloud-alt contact__icon white"
+										></i>
+										Check it out!
+										<i class="uil uil-arrow-right button__icon"></i>
+									</a>
+									<a
+										href="https://github.com/TaiveyonShaw/Yuima-ru"
+										class="button button--flex button--small portfolio__button"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i class="uil uil-github contact__icon white"></i>
+										Github Repository
+										<i class="uil uil-arrow-right button__icon"></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
+
 					<!-- Add Arrows -->
 					<div class="swiper-button-next">
 						<i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
@@ -936,27 +953,26 @@
 				</div>
 
 				<!--==================== PROJECT IN MIND ====================-->
-				<div class="project section">
+				<div class="project">
 					<div class="project__bg">
 						<h2 class="proj__title">Current Project</h2>
 						<span class="proj__subtitle">Project In Mind</span>
 
 						<div class="project__container container">
 							<div class="project__data">
-								<h2 class="project__title">
-									Building Makemore with Andrej Karpathy
-								</h2>
+								<h2 class="project__title">Next.Js Conversion</h2>
 								<p class="project__description">
-									Part 2 for the Zero to hero series made by Andrej Karpathy!
+									Converting the church website to Next.js for optimization and
+									easier implementation for complex features.
 								</p>
 								<a
-									href="https://www.youtube.com/watch?v=PaCmpygFfXo&ab_channel=AndrejKarpathy"
+									href="https://github.com/TaiveyonShaw/yuima-ru.nextjs"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									<img
-										src="images/micrograd.jpg"
-										alt="Micrograd Image"
+										src="images/churchwebsite.png"
+										alt="Church Website Image"
 										class="project__img"
 									/>
 								</a>
@@ -976,7 +992,7 @@
 						<span class="footer__subtitle">Software Developer</span>
 					</div>
 
-					<div class="socials">
+					<div class="socials" id="contact">
 						<div class="contact__container container grid">
 							<div class="contact__content">
 								<div class="contactTitleSection">

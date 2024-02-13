@@ -227,7 +227,7 @@ img {
 }
 
 .nav__list {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 }
 
@@ -282,7 +282,7 @@ img {
 
 .home__content {
 	grid-template-columns: 0.5fr 3fr;
-	padding-top: 3.5rem;
+	padding-top: 15vh;
 	align-items: center;
 }
 
@@ -330,10 +330,12 @@ img {
 }
 
 .home__scroll {
-	display: none;
+	display: block;
+	justify-self: center;
 }
 
 .home__scroll-button {
+	margin: 8rem 0 5rem;
 	color: var(--first-color);
 	transition: 0.3s;
 }
@@ -412,9 +414,6 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about {
-	padding-top: 10rem;
-}
 .about__img {
 	width: 200px;
 	border-radius: 0.5rem;
@@ -528,15 +527,21 @@ img {
 .skills__close .skills__list {
 	height: 0;
 	overflow: hidden;
+	transition: 0.3s;
 }
 
 .skills__open .skills__list {
 	height: max-content;
 	margin-bottom: var(--mb-2-5);
+	transition: 0.3s;
 }
 
 .skills__open .skills__arrow {
 	transform: rotate(-180deg);
+}
+
+.technicalTitle {
+	margin-top: 5rem;
 }
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs {
@@ -678,6 +683,10 @@ img {
 }
 
 /*==================== PORTFOLIO ====================*/
+.portfolio {
+	padding-bottom: 0;
+}
+
 .portfolio__container {
 	overflow: initial;
 }
@@ -699,6 +708,12 @@ img {
 
 .portfolio__description {
 	margin-bottom: var(--mb-0-75);
+}
+
+.portfolioButtons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .portfolio__button:hover .button__icon {
@@ -740,6 +755,7 @@ img {
 /*==================== PROJECT IN MIND ====================*/
 .project {
 	text-align: center;
+	margin-top: 4rem;
 }
 
 .proj__title {
@@ -778,6 +794,7 @@ img {
 
 .project__img {
 	border-radius: 1rem;
+	margin-bottom: 1rem;
 }
 
 /*==================== CONTACT ME ====================*/
@@ -972,10 +989,6 @@ img {
 	color: #fff;
 }
 /*==================== FOOTER ====================*/
-.footer {
-	padding-top: 1rem;
-}
-
 .footer__container {
 	gap: 4rem;
 }
@@ -1017,7 +1030,8 @@ img {
 	font-size: var(--small-font-size);
 	text-align: center;
 	color: var(--text-color-light);
-	margin-top: var(--mb-3);
+	margin-top: var(--mb-1-5);
+	margin-bottom: var(--mb-2);
 }
 
 .footer__title,
@@ -1201,7 +1215,7 @@ img {
 	}
 
 	.home__container {
-		row-gap: 5rem;
+		row-gap: 8rem;
 	}
 
 	.home__content {
@@ -1213,17 +1227,7 @@ img {
 		width: 270px;
 	}
 
-	.home__scroll {
-		display: block;
-		justify-self: center;
-	}
-
-	.home__scroll-button {
-		margin: 12rem 0 1rem;
-	}
-
 	.about {
-		padding-top: 10rem;
 		padding-bottom: 10rem;
 	}
 
@@ -1235,6 +1239,7 @@ img {
 	.about__buttons {
 		text-align: center;
 	}
+
 	.about__img {
 		width: 350px;
 	}
@@ -1303,7 +1308,7 @@ img {
 	.project__container {
 		background-color: var(--first-color-second);
 		border-radius: 1rem;
-		padding: 3rem 2.5rem 0;
+		padding: 1rem 2.5rem 1rem;
 		grid-template-columns: 1fr max-content;
 	}
 
@@ -1330,6 +1335,7 @@ img {
 
 	.footer__copy {
 		margin-top: 1rem;
+		margin-bottom: 0rem;
 	}
 }
 
