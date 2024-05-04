@@ -20,28 +20,28 @@ if (navClose) {
 }
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll(".nav__link");
+const navLink = document.querySelectorAll(".navLink");
 
 function linkAction() {
 	const navMenu = document.getElementById("nav-menu");
-	// When we click on each nav__link, we remove the show-menu class
+	// When we click on each navLink, we remove the show-menu class
 	navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName("skills__content"),
-	skillsHeader = document.querySelectorAll(".skills__header");
+const skillsContent = document.getElementsByClassName("skillsContent"),
+	skillsHeader = document.querySelectorAll(".skillsHeader");
 
 function toggleSkills() {
 	let itemClass = this.parentNode.className;
 
 	for (let i = 0; i < skillsContent.length; i++) {
-		skillsContent[i].className = "skills__content skills__close";
+		skillsContent[i].className = "skillsContent skillsClose";
 	}
 
-	if (itemClass === "skills__content skills__close") {
-		this.parentNode.className = "skills__content skills__open";
+	if (itemClass === "skillsContent skillsClose") {
+		this.parentNode.className = "skillsContent skillsOpen";
 	}
 }
 
@@ -58,20 +58,20 @@ tabs.forEach((tab) => {
 		const target = document.querySelector(tab.dataset.target);
 
 		tabContents.forEach((tabContent) => {
-			tabContent.classList.remove("qualification__active");
+			tabContent.classList.remove("qualificationCurrentActive");
 		});
-		target.classList.add("qualification__active");
+		target.classList.add("qualificationCurrentActive");
 
 		tabs.forEach((tab) => {
-			tab.classList.remove("qualification__active");
+			tab.classList.remove("qualificationCurrentActive");
 		});
-		tab.classList.add("qualification__active");
+		tab.classList.add("qualificationCurrentActive");
 	});
 });
 
-const modalViews = document.querySelectorAll(".qualification__modal"),
-	modalBtns = document.querySelectorAll(".qualification__modal-button"),
-	modalCloses = document.querySelectorAll(".qualification__modal-close");
+const modalViews = document.querySelectorAll(".qualificationModal"),
+	modalBtns = document.querySelectorAll(".qualificationModal-button"),
+	modalCloses = document.querySelectorAll(".qualificationModal-close");
 
 let modal = function (modalClick) {
 	modalViews[modalClick].classList.add("active-modal");
@@ -92,7 +92,7 @@ modalCloses.forEach((modalClose) => {
 });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio__container", {
+let swiper = new Swiper(".portfolioContainer", {
 	cssMode: true,
 	loop: true,
 
@@ -119,11 +119,11 @@ function scrollActive() {
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 			document
-				.querySelector(".nav__menu a[href*=" + sectionId + "]")
+				.querySelector(".navMenu a[href*=" + sectionId + "]")
 				.classList.add("active-link");
 		} else {
 			document
-				.querySelector(".nav__menu a[href*=" + sectionId + "]")
+				.querySelector(".navMenu a[href*=" + sectionId + "]")
 				.classList.remove("active-link");
 		}
 	});
