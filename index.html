@@ -1,867 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!--==================== UNICONS ====================-->
-		<link
-			rel="stylesheet"
-			href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
-		/>
-
-		<!--==================== SWIPER CSS ====================-->
-		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
-
-		<!--==================== CSS ====================-->
-		<link rel="stylesheet" href="styles/styles.css" />
-
-		<!--==================== Website Icon ====================-->
-		<link rel="icon" href="images/Koala.png" />
-
-		<!--=============== REMIXICONS ===============-->
-		<link
-			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-			rel="stylesheet"
-		/>
-
-		<title>Tai'veyon Shaw</title>
-	</head>
-
-	<body>
-		<!--==================== HEADER ====================-->
-		<header class="header" id="header">
-			<nav class="nav container">
-				<a href="#home" class="navLogo">Tai'veyon Shaw</a>
-
-				<div class="navMenu" id="nav-menu">
-					<ul class="navList grid">
-						<li class="navItem">
-							<a href="#home" class="navLink active-link">
-								<i class="uil uil-estate navIcon"></i>Home
-							</a>
-						</li>
-
-						<li class="navItem">
-							<a href="#qualifications" class="navLink">
-								<i class="uil uil-briefcase-alt navIcon"></i>Qualifications
-							</a>
-						</li>
-
-						<li class="navItem">
-							<a href="#portfolio" class="navLink">
-								<i class="uil uil-scenery navIcon"></i>Portfolio
-							</a>
-						</li>
-					</ul>
-					<i class="uil uil-times navClose" id="nav-close"></i>
-				</div>
-
-				<div class="navBtns">
-					<!-- Theme change button -->
-					<i class="uil uil-moon change-theme" id="theme-button"></i>
-
-					<div class="navToggle" id="nav-toggle">
-						<i class="uil uil-apps"></i>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-		<!--==================== MAIN ====================-->
-		<main class="main">
-			<!--==================== HOME ====================-->
-			<section class="home section" id="home">
-				<div class="homeContainer container grid">
-					<div class="homeContent grid">
-						<div class="homeSocial">
-							<a
-								href="https://www.linkedin.com/in/taiveyonshaw/"
-								target="_blank"
-								class="homeSocial-icon"
-							>
-								<i class="uil uil-linkedin"></i>
-							</a>
-
-							<a
-								href="https://github.com/TaiveyonShaw"
-								target="_blank"
-								class="homeSocial-icon"
-							>
-								<i class="uil uil-github"></i>
-							</a>
-						</div>
-
-						<div class="homeImg">
-							<svg
-								class="homeBlob"
-								viewBox="0 0 200 187"
-								xmlns="http://www.w3.org/2000/svg"
-								xmlns:xlink="http://www.w3.org/1999/xlink"
-							>
-								<mask id="mask0" mask-type="alpha">
-									<path
-										d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                  130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                  97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                  0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-									/>
-								</mask>
-								<g mask="url(#mask0)">
-									<path
-										d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                  165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                  129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                  -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-									/>
-									<image
-										class="homeBlob-img"
-										x="18"
-										y="20"
-										xlink:href="images/myPfp.png"
-									/>
-								</g>
-							</svg>
-						</div>
-
-						<div class="homeData">
-							<h1 class="homeTitle">Tai'veyon Shaw</h1>
-							<h3 class="homeSubtitle">Data Scientist</h3>
-							<p class="homeDescription">
-								With interest in Web Development, Computational Neural Networks
-								and Artificial Intelligence
-							</p>
-							<a href="#contact" class="button button--flex">
-								Contact Me
-								<i class="uil ri-arrow-right-up-line buttonIcon"></i>
-							</a>
-						</div>
-					</div>
-					<div class="homeScroll">
-						<a href="#qualifications" class="homeScroll-button button--flex">
-							<i class="uil uil-mouse-alt homeScroll-mouse"></i>
-							<span class="homeScroll-name">Scroll down</span>
-							<i class="uil uil-arrow-down homeScroll-arrow"></i>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!--==================== QUALIFICATION ====================-->
-			<section class="qualification section" id="qualifications">
-				<h2 class="sectionTitle">Qualifications</h2>
-				<span class="sectionSubtitle">My Records</span>
-
-				<div class="qualificationContainer container">
-					<div class="qualificationTabs">
-						<div
-							class="qualificationButton button--flex qualificationCurrentActive"
-							data-target="#education"
-						>
-							<i class="uil uil-graduation-cap qualificationIcon"></i>
-							Certificates
-						</div>
-						<div
-							class="qualificationButton button--flex qualification"
-							data-target="#work"
-						>
-							<i class="uil uil-briefcase-alt qualificationIcon"></i>
-							Experience
-						</div>
-					</div>
-
-					<div class="qualificationSections">
-						<!--==================== QUALIFICATION CONTENT 1 ====================-->
-						<div
-							class="qualificationContent qualificationCurrentActive"
-							data-content
-							id="education"
-						>
-							<!--==================== QUALIFICATION 1 ====================-->
-							<div class="qualificationData">
-								<div class="qualificationBox">
-									<h3 class="qualificationTitle">
-										Data Science
-										<i class="uil uil-database"></i>
-										(Bachelors of Science)
-									</h3>
-									<span class="qualificationSubtitle"
-										>Western Washington University - Bellingham</span
-									>
-									<div class="qualificationCalendar">
-										<i class="uil uil-calendar-alt"></i>
-										2019 - 2023
-									</div>
-								</div>
-
-								<div>
-									<span class="qualificationRounder"></span>
-									<span class="qualificationLine"></span>
-								</div>
-							</div>
-
-							<!--==================== QUALIFICATION 2 ====================-->
-							<div class="qualificationData">
-								<div></div>
-								<div>
-									<span class="qualificationRounder"></span>
-									<span class="qualificationLine"></span>
-								</div>
-
-								<div class="qualificationBox">
-									<h3 class="qualificationTitle">
-										Mathematics
-										<i class="uil uil-calculator-alt"></i>
-										(Minor)
-									</h3>
-									<span class="qualificationSubtitle"
-										>Western Washington University - Bellingham</span
-									>
-									<div class="qualificationCalendar">
-										<i class="uil uil-calendar-alt"></i>
-										2019 - 2023
-									</div>
-								</div>
-							</div>
-
-							<!--==================== QUALIFICATION 3 ====================-->
-							<div class="qualificationData">
-								<div class="qualificationBox">
-									<h3 class="qualificationTitle">
-										Japanese
-										<i class="uil uil-letter-japanese-a"></i>
-										(Minor)
-									</h3>
-									<span class="qualificationSubtitle"
-										>Western Washington University - Bellingham</span
-									>
-									<div class="qualificationCalendar">
-										<i class="uil uil-calendar-alt"></i>
-										2019 - 2023
-									</div>
-								</div>
-
-								<div>
-									<span class="qualificationRounder"></span>
-								</div>
-							</div>
-						</div>
-						<!--==================== QUALIFICATION CONTENT 2 ====================-->
-						<div class="qualificationContent" data-content id="work">
-							<!--==================== QUALIFICATION 1 ====================-->
-							<div class="qualificationData">
-								<div>
-									<h3 class="qualificationTitle">
-										<i class="uil uil-browser"></i>
-										Web Developer (Work Study)
-									</h3>
-									<span class="qualificationSubtitle"
-										>Western Washington University(EAS) - Bellingham</span
-									>
-									<div class="qualificationCalendar">
-										<i class="uil uil-calendar-alt"></i>
-										2021 - 2023
-									</div>
-
-									<span
-										class="button button--flex button--small button--link qualificationModal-button"
-									>
-										View More
-										<i class="uil uil-arrow-right buttonIcon"></i>
-									</span>
-
-									<div class="qualificationModal">
-										<div class="qualificationModal-content">
-											<h4 class="qualificationModal-title">
-												Web Developer (Work Study)
-											</h4>
-											<i class="uil uil-times qualificationModal-close"></i>
-
-											<ul class="qualificationModal-qualifications grid">
-												<li class="qualificationModal-qualification">
-													<i
-														class="uil uil-check-circle qualificationModal-icon"
-													></i>
-													<p>
-														Revamped legacy Unity forms by seamlessly
-														transitioning them to the modern OnBase form
-														systems, aligning with the latest system
-														requirements and adhering to Web Content
-														Accessibility Guidelines (WCAG) for enhanced
-														inclusivity.
-													</p>
-												</li>
-
-												<li class="qualificationModal-qualification">
-													<i
-														class="uil uil-check-circle qualificationModal-icon"
-													></i>
-													<p>
-														Devised a streamlined and user-friendly automated
-														script, skillfully combining Groovy and SQL, to
-														efficiently convert OnBase files to Excel format to
-														improve productivity.
-													</p>
-												</li>
-
-												<li class="qualificationModal-qualification">
-													<i
-														class="uil uil-check-circle qualificationModal-icon"
-													></i>
-													<p>
-														Collaborated effectively within a cooperative work
-														environment, participating in weekly meetings to
-														provide updates on task progress and ensure seamless
-														coordination among team members.
-													</p>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-
-								<div>
-									<span class="qualificationRounder"></span>
-									<span class="qualificationLine"></span>
-								</div>
-							</div>
-							<!--==================== QUALIFICATION 2 ====================-->
-							<div class="qualificationData">
-								<div></div>
-								<div>
-									<span class="qualificationRounder"></span>
-								</div>
-								<div>
-									<h3 class="qualificationTitle">
-										<i class="uil uil-browser"></i>
-										Scientist
-									</h3>
-									<span class="qualificationSubtitle">
-										NIWC LANT - Hanahan
-									</span>
-									<div class="qualificationCalendar">
-										<i class="uil uil-calendar-alt"></i>
-										July 2024 - Current
-									</div>
-
-									<span
-										class="button button--flex button--small button--link qualificationModal-button"
-									>
-										View More
-										<i class="uil uil-arrow-right buttonIcon"></i>
-									</span>
-
-									<div class="qualificationModal">
-										<div class="qualificationModal-content">
-											<h4 class="qualificationModal-title">Scientist</h4>
-											<i class="uil uil-times qualificationModal-close"></i>
-
-											<ul class="qualificationModal-qualifications grid">
-												<li class="qualificationModal-qualification">
-													<i
-														class="uil uil-check-circle qualificationModal-icon"
-													></i>
-													<p>
-														Devised a streamlined and user-friendly automated
-														system to keep track of who is on leave and on
-														travel for multiple projects.
-													</p>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!--==================== SKILLS ====================-->
-				<div class="skills">
-					<h2 class="sectionTitle technicalTitle">My Personal Favorites</h2>
-					<span class="sectionSubtitle">Languages and Frameworks</span>
-
-					<div class="skillsContainer container grid">
-						<div>
-							<!--==================== SKILLS 1 ====================-->
-							<div class="skillsContent skillsOpen">
-								<div class="skillsHeader">
-									<i class="uil uil-brackets-curly skillsIcon"></i>
-
-									<div>
-										<h1 class="skillsTitle">Software Development</h1>
-										<span class="skillsSubtitle">Web Dev/Others</span>
-									</div>
-
-									<i class="uil uil-angle-down skillsArrow"></i>
-								</div>
-
-								<div class="skillsList grid">
-									<a
-										href="https://legacy.reactjs.org/docs/getting-started.html"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												React
-												<i class="uil uil-react homeSocial-icon"></i>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://www.typescriptlang.org"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Typescript
-												<i class="uil uil-text homeSocial-icon"></i>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://www.java.com/en/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Java
-												<img
-													src="images/java.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://www.python.org/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Python
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="25"
-													height="25"
-													preserveAspectRatio="xMinYMin meet"
-													viewBox="0 0 256 255"
-													id="python"
-												>
-													<defs>
-														<linearGradient
-															id="a"
-															x1="12.959%"
-															x2="79.639%"
-															y1="12.039%"
-															y2="78.201%"
-														>
-															<stop offset="0%" stop-color="#387EB8"></stop>
-															<stop offset="100%" stop-color="#366994"></stop>
-														</linearGradient>
-														<linearGradient
-															id="b"
-															x1="19.128%"
-															x2="90.742%"
-															y1="20.579%"
-															y2="88.429%"
-														>
-															<stop offset="0%" stop-color="#FFE052"></stop>
-															<stop offset="100%" stop-color="#FFC331"></stop>
-														</linearGradient>
-													</defs>
-													<path
-														fill="url(#a)"
-														d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z"
-													></path>
-													<path
-														fill="url(#b)"
-														d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z"
-													></path>
-												</svg>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!--==================== SKILLS 2 ====================-->
-						<div>
-							<div class="skillsContent skillsClose">
-								<div class="skillsHeader">
-									<i class="uil uil-robot skillsIcon"></i>
-
-									<div>
-										<h1 class="skillsTitle">Data Science</h1>
-										<span class="skillsSubtitle">Artificial Intelligence</span>
-									</div>
-
-									<i class="uil uil-angle-down skillsArrow"></i>
-								</div>
-
-								<div class="skillsList grid">
-									<a
-										href="https://numpy.org/devdocs/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												NumPy
-												<img
-													src="images/numpylogoicon.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://pytorch.org/docs/stable/index.html"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												PyTorch
-												<img
-													src="images/pytorchicon.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://pandas.pydata.org/docs/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Pandas
-												<img
-													src="images/pandasicon.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://matplotlib.org/stable/index.html"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Matplotlib
-												<img
-													src="images/matplotlibicon.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://scikit-learn.org/stable/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												Scikit-Learn
-												<img
-													src="images/sklearnicon.png"
-													alt=""
-													width="45"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												BeautifulSoup
-												<img
-													src="images/bsicon.png"
-													alt=""
-													width="75"
-													height="15"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://docs.scipy.org/doc/scipy/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												SciPy
-												<img
-													src="images/scipyicon.svg"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-
-									<a
-										href="https://wandb.ai/site/"
-										target="_blank"
-										class="skillsName"
-										rel="noopener noreferrer"
-									>
-										<div class="skillsData">
-											<div class="skillsTitles">
-												WandB
-												<img
-													src="images/wandb.png"
-													alt=""
-													width="25"
-													height="25"
-												/>
-											</div>
-											<div class="skillsBar"></div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!--==================== PORTFOLIO ====================-->
-			<section class="portfolio section" id="portfolio">
-				<h2 class="sectionTitle">My Portfolio</h2>
-				<span class="sectionSubtitle"
-					>Care to take a look at some projects?</span
-				>
-
-				<div class="portfolioContainer container swiper-container">
-					<div class="swiper-wrapper">
-						<!-- ==================== PORTFOLIO 1 ==================== -->
-						<div class="portfolioContent grid swiper-slide">
-							<img
-								src="/images/churchwebsite.png"
-								alt="Church Website Image"
-								class="portfolioImg"
-							/>
-
-							<div class="portfolioData">
-								<h3 class="portfolioTitle">YICC Website</h3>
-								<p class="portfolioDescription">
-									A website for my local church made to be adaptable to all
-									devices.
-								</p>
-								<div class="portfolioButtons">
-									<a
-										href="https://yuima-ru-christian-church.vercel.app/"
-										class="button button--flex button--small portfolioButton"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<i class="uil uil-desktop-cloud-alt contactIcon white"></i>
-										Check it out!
-										<i class="uil uil-arrow-right buttonIcon"></i>
-									</a>
-									<a
-										href="https://github.com/TaiveyonShaw/Yuima-ru"
-										class="button button--flex button--small portfolioButton"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<i class="uil uil-github contactIcon white"></i>
-										Github Repository
-										<i class="uil uil-arrow-right buttonIcon"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Add Arrows -->
-					<div class="swiper-button-next">
-						<i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-					</div>
-					<div class="swiper-button-prev">
-						<i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-					</div>
-
-					<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
-				</div>
-			</section>
-		</main>
-
-		<!--==================== FOOTER ====================-->
-		<footer class="footer">
-			<div class="footer__bg">
-				<div class="footerContainer container grid">
-					<div>
-						<h1 class="footerTitle">Tai'veyon Shaw</h1>
-						<span class="footerSubtitle">Software Developer</span>
-					</div>
-
-					<div class="socials" id="contact">
-						<div class="contactContainer container grid">
-							<div class="contactContent">
-								<div class="contactTitleSection">
-									<h3 class="contactFooterTitle white">
-										My Socials
-										<i class="ri-chat-3-line contactIcon"></i>
-									</h3>
-								</div>
-
-								<!--==================== Social Info 1 ====================-->
-								<div class="contactInformation">
-									<div class="contactDescription">
-										<a
-											href="https://github.com/TaiveyonShaw"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											<h3 class="contactTitle white">
-												My Github
-												<i class="uil uil-github contactIcon"></i>
-											</h3>
-											<span class="contactSubtitle"
-												>Click here to see my github page</span
-											>
-										</a>
-									</div>
-								</div>
-
-								<!--==================== Social Info 2 ====================-->
-								<div class="contactInformation">
-									<div class="contactDescription">
-										<a
-											href="https://www.linkedin.com/in/taiveyonshaw/"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											<h3 class="contactTitle white">
-												My LinkedIn
-												<i class="uil uil-linkedin contactIcon"></i>
-											</h3>
-											<span class="contactSubtitle"
-												>Click here to see my LinkedIn page</span
-											>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="contactContainer container grid">
-						<div class="contactContent">
-							<div class="contactTitleSection">
-								<h3 class="contactFooterTitle white">
-									My Contacts <i class="ri-information-line contactIcon"></i>
-								</h3>
-							</div>
-
-							<!--==================== CONTACT INFO 1 ====================-->
-							<div class="contactInformation">
-								<div class="contactDescription">
-									<a href="tel: 360-720-0530">
-										<h3 class="contactTitle white">
-											Phone Number
-											<i class="uil uil-phone contactIcon"></i>
-										</h3>
-										<span class="contactSubtitle"> +1 (360) 720-0530</span>
-									</a>
-								</div>
-							</div>
-
-							<!--==================== CONTACT INFO 2 ====================-->
-							<div class="contactInformation">
-								<div class="contactDescription">
-									<a href="mailto: taiveyonshaw@gmail.com">
-										<h3 class="contactTitle white">
-											E-mail
-											<i class="uil uil-envelope contactIcon"></i>
-										</h3>
-										<span class="contactSubtitle">taiveyonshaw@gmail.com</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<p class="footerCopy">
-					&#169; Tai'veyon Shaw
-					<script>
-						document.write(new Date().getFullYear().toString());
-					</script>
-					. All rights reserved
-				</p>
-			</div>
-		</footer>
-
-		<!--==================== SCROLL TOP ====================-->
-		<a href="#" class="scrollup" id="scroll-up">
-			<i class="uil uil-arrow-up scrollupIcon"></i>
-		</a>
-
-		<!--==================== SWIPER JS ====================-->
-		<script src="components/swiper-bundle.min.js"></script>
-
-		<!--==================== MAIN JS ====================-->
-		<script src="components/main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Tai'veyon Shaw</title>
+  </head>
+  <body>
+    <canvas class="background-canvas" id="particleCanvas"></canvas>
+
+    <header class="header">
+      <a href="#" class="logo">TS</a>
+      <nav class="nav">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a
+          href="https://github.com/TaiveyonShaw"
+          class="nav-link hide-mobile image-realign"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            />
+          </svg>
+        </a>
+        <button
+          class="theme-toggle image-realign"
+          onclick="toggleTheme()"
+          aria-label="Toggle theme"
+        >
+          <svg
+            class="sun-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+            />
+          </svg>
+          <svg
+            class="moon-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="display: none"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="prose">
+        <h1>Tai'veyon Shaw</h1>
+      </div>
+
+      <article class="prose">
+        <p>
+          Hey! I'm Tai'veyon Shaw, a data scientist and web development
+          enthusiast.
+        </p>
+
+        <p>
+          Working at
+          <a href="https://www.niwcatlantic.navy.mil/" class="magic-link">
+            <span
+              class="magic-link-icon"
+              style="background-image: url('images/niwc-logo.png')"
+            ></span>
+            Naval Information Warfare Center Atlantic (NIWC LANT) </a
+          ><br />
+          Graduate of
+          <a href="#" class="magic-link">
+            <span
+              class="magic-link-icon"
+              style="background-image: url('images/wwu-logo.png')"
+            ></span>
+            Western Washington University (WWU) </a
+          ><br />
+          Currently working on creating a <strong>physics engine in C</strong> to learn C
+          </a>
+        </p>
+
+        <p>
+          I don't like my head hurting but being able to understand topics that could make an impact is of interest to me.
+          Creating A.I. and developing websites are my two focuses currently but plan on transitioning to robotics after 
+          learning electrical and mechanical engineering.
+          You can find my <a href="#projects">complete project portfolio here</a>.
+        </p>
+
+        <p>
+          When I'm not coding, I enjoy snowboarding, traveling, and understanding new
+          technologies. Currently focused on understanding the transformer model and the math behind it.
+        </p>
+
+        <p>Currently living in <strong>Charleston, South Carolina</strong>.</p>
+
+        <div class="social-section">
+          <p>Find me on</p>
+          <div class="social-links">
+            <a
+              href="https://github.com/TaiveyonShaw"
+              class="social-link"
+              target="_blank"
+            >
+              <span class="social-icon">
+            <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            />
+          </svg></span> GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              class="social-link"
+              target="_blank"
+            >
+              <span class="social-icon">
+                <svg class="social-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg> 
+              </span> LinkedIn
+            </a>
+          </div>
+
+          <p>Or email me at <code>taiveyonshaw@gmail.com</code></p>
+        </div>
+      </article>
+      <div class="footer">
+        <span>© 2025 Taiveyon Shaw</span>
+      </div>
+    </main>
+  </body>
+  <script src="scripts/main.js"></script>
 </html>
