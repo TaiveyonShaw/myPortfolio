@@ -6,3 +6,4 @@
 - Mess a bit on color scheme and font.
 - No mobile compatibility.
 - Clean up CSS code.
+- Add small background animation. (Some chaos equation?)
