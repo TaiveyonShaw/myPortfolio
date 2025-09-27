@@ -196,7 +196,7 @@ body.dark-mode {
 }
 
 .prose a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Magic links with icons */
@@ -235,7 +235,6 @@ body.dark-mode {
   color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.2s ease;
-  font-size: 18px;
 }
 
 .social-link:hover {
