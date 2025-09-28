@@ -18,6 +18,7 @@
   --gradient-from: #ec4899;
   --gradient-to: #8b5cf6;
   color-scheme: light;
+  --logo-bg: "../images/initial-black.png";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,11 +32,11 @@
     --gradient-from: #ec4899;
     --gradient-to: #8b5cf6;
     color-scheme: dark;
+    --logo-bg: url("../images/initial-white.png");
   }
 }
 
 body.light-mode {
-  font-family: "Montserrat", sans-serif;
   color: var(--text-secondary);
   background: var(--bg-primary);
   transition: all 0.3s ease;
@@ -45,7 +46,6 @@ body.light-mode {
 }
 
 body.dark-mode {
-  font-family: "Montserrat", sans-serif;
   color: var(--text-secondary);
   background: var(--bg-primary);
   transition: all 0.3s ease;
@@ -77,7 +77,7 @@ body.dark-mode {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background-image: url("../images/initial-black.png");
+  background-image: var(--logo-bg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -87,7 +87,7 @@ body.dark-mode {
     display: inline-block;
     width: 48px;
     height: 48px;
-    background-image: url("../images/initial-white.png");
+    background-image: var(--logo-bg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -172,7 +172,7 @@ body.dark-mode {
 
 .prose p {
   animation: slideInContent 0.8s ease-out 0.2s both;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.65;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
@@ -242,72 +242,17 @@ body.dark-mode {
 }
 
 .social-icon {
+  display: flex;
+  align-items: center;
   opacity: 0.75;
   font-size: 16px;
 }
 
-/* Sponsor section */
-.sponsor-section {
-  margin: 2rem 0;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
+.social-text {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.03rem;
 }
-
-.btn-rose {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #ec4899, #f43f5e);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
-
-.btn-rose:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
-}
-
-.btn-yellow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #f59e0b, #eab308);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  margin-left: 8px;
-}
-
-.btn-yellow:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-}
-
-.sponsor-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.sponsor-note {
-  color: var(--text-secondary);
-  opacity: 0.5;
-  font-size: 14px;
-}
-
-.sponsor-note a {
-  color: inherit;
-}
-
 /* Experience and Project sections */
 .section {
   margin: 3rem 0;
