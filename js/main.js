@@ -1,3 +1,37 @@
+// Utility to load external HTML into an element
+async function loadComponent(id, path) {
+  const res = await fetch(`${path}?_=${Date.now()}`);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
+}
+
+// Load header and footer
+await loadComponent("header", "components/header.html");
+await loadComponent("footer", "components/footer.html");
+
+// Initial page load (default to 'about')
+let currentPage = "about";
+loadPage(currentPage);
+
+// Listen for nav link clicks (delegation)
+document.addEventListener("click", (e) => {
+  if (e.target.matches("[data-page]")) {
+    e.preventDefault();
+    const page = e.target.getAttribute("data-page");
+    if (page !== currentPage) {
+      currentPage = page;
+      loadPage(page);
+    }
+  }
+});
+
+// Load content into the #content container
+async function loadPage(pageName) {
+  const res = await fetch(`components/${pageName}.html?_=${Date.now()}`);
+  const html = await res.text();
+  document.getElementById("content").innerHTML = html;
+}
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 
@@ -59,6 +93,9 @@ function toggleTheme() {
     html.style.setProperty("color-scheme", "dark");
   }
 }
+
+window.toggleTheme = toggleTheme;
+window.toggleTheme();
 
 // Detect system theme on first load
 // const systemPrefersDark = window.matchMedia(
