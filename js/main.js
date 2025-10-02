@@ -1,55 +1,7 @@
-// Utility to load external HTML into an element
-async function loadComponent(id, path) {
-  const res = await fetch(`${path}?_=${Date.now()}`);
-  const html = await res.text();
-  document.getElementById(id).innerHTML = html;
-}
-
-// Load header and footer
-await loadComponent("header", "components/header.html");
-await loadComponent("footer", "components/footer.html");
-
-// Initial page load (default to 'about')
 let currentPage = "about";
-loadPage(currentPage);
-
-// Listen for nav link clicks (delegation)
-document.addEventListener("click", (e) => {
-  if (e.target.matches("[data-page]")) {
-    e.preventDefault();
-    const page = e.target.getAttribute("data-page");
-    if (page !== currentPage) {
-      currentPage = page;
-      loadPage(page);
-    }
-  }
-});
-
-// Load content into the #content container
-async function loadPage(pageName) {
-  const res = await fetch(`components/${pageName}.html?_=${Date.now()}`);
-  const html = await res.text();
-  document.getElementById("content").innerHTML = html;
-}
-
-// Get the current year
+const userTheme = localStorage.getItem("theme");
 const currentYear = new Date().getFullYear();
-
-// Insert it into the span with id="year"
-document.getElementById("year").textContent = currentYear;
-
-// Initialize
-document.addEventListener("DOMContentLoaded", () => {
-  // Set initial theme based on system preference
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    document.documentElement.style.colorScheme = "dark";
-    document.querySelector(".sun-icon").style.display = "inline";
-    document.querySelector(".moon-icon").style.display = "none";
-  }
-});
+window.toggleTheme = toggleTheme;
 
 // Theme toggle
 function toggleTheme() {
@@ -94,26 +46,51 @@ function toggleTheme() {
   }
 }
 
-window.toggleTheme = toggleTheme;
-window.toggleTheme();
+// Utility to load external HTML into an element
+async function loadComponent(id, path) {
+  const res = await fetch(`${path}?_=${Date.now()}`);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
+}
 
-// Detect system theme on first load
-// const systemPrefersDark = window.matchMedia(
-//   "(prefers-color-scheme: dark)"
-// ).matches;
-// const savedTheme = localStorage.getItem("theme");
+// Load content into the #content container
+async function loadPage(pageName) {
+  const res = await fetch(`components/${pageName}.html?_=${Date.now()}`);
+  const html = await res.text();
+  document.getElementById("content").innerHTML = html;
+}
 
-// if (savedTheme) {
-//   updateLogo(savedTheme);
-// } else {
-//   updateLogo(systemPrefersDark ? "dark" : "light");
-// }
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load header and footer first
+  await loadComponent("header", "components/header.html");
+  await loadComponent("footer", "components/footer.html");
 
-// // Hook this into your theme toggle logic:
-// document.getElementById("toggle-theme").addEventListener("click", () => {
-//   const newTheme = document.body.classList.toggle("dark-mode")
-//     ? "dark"
-//     : "light";
-//   localStorage.setItem("theme", newTheme);
-//   updateLogo(newTheme);
-// });
+  // Now safe to insert current year
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = currentYear;
+  }
+
+  // Initial page load
+  loadPage(currentPage);
+
+  // System theme detection
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (prefersDark) {
+    document.documentElement.style.colorScheme = "dark";
+    document.querySelector(".sun-icon").style.display = "inline";
+    document.querySelector(".moon-icon").style.display = "none";
+  }
+});
+
+// Listen for nav link clicks (delegation)
+document.addEventListener("click", (e) => {
+  if (e.target.matches("[data-page]")) {
+    e.preventDefault();
+    const page = e.target.getAttribute("data-page");
+    if (page !== currentPage) {
+      currentPage = page;
+      loadPage(page);
+    }
+  }
+});
