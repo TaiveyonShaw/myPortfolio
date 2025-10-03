@@ -1,6 +1,7 @@
 let currentPage = "about";
 const userTheme = localStorage.getItem("theme");
 const currentYear = new Date().getFullYear();
+
 window.toggleTheme = toggleTheme;
 
 // Theme toggle
@@ -23,9 +24,6 @@ function toggleTheme() {
     html.style.setProperty("--bg-primary", "#ffffff");
     html.style.setProperty("--bg-secondary", "#f8e5d7");
     html.style.setProperty("--border", "#e5e7eb");
-    html.style.setProperty("--shadow", "rgba(0, 0, 0, 0.1)");
-    html.style.setProperty("--gradient-from", "#ec4899");
-    html.style.setProperty("--gradient-to", "#8b5cf6");
     html.style.setProperty("color-scheme", "light");
   } else {
     // Icon
@@ -41,9 +39,6 @@ function toggleTheme() {
     html.style.setProperty("--bg-primary", "#121212");
     html.style.setProperty("--bg-secondary", "#202020");
     html.style.setProperty("--border", "#374151");
-    html.style.setProperty("--shadow", "rgba(0, 0, 0, 0.3)");
-    html.style.setProperty("--gradient-from", "#ec4899");
-    html.style.setProperty("--gradient-to", "#8b5cf6");
     html.style.setProperty("color-scheme", "dark");
   }
 }

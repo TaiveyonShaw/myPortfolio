@@ -22,12 +22,24 @@
 
 :root {
     color-scheme: light;
+    --text-primary: #374151;
+    --text-secondary: #6b7280;
+    --text-accent: #3b82f6;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8e5d7;
+    --border: #e5e7eb;
     --logo-bg: url("../images/initial-black.png");
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
+        --text-primary: #e5e7eb;
+        --text-secondary: #9ca3af;
+        --text-accent: #60a5fa;
+        --border: #374151;
+        --bg-primary: #121212;
+        --bg-secondary: #161618;
         --logo-bg: url("../images/initial-white.png");
     }
 }
