@@ -21,30 +21,12 @@
 }
 
 :root {
-    --text-primary: #374151;
-    --text-secondary: #6b7280;
-    --text-accent: #3b82f6;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --border: #e5e7eb;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --gradient-from: #ec4899;
-    --gradient-to: #8b5cf6;
     color-scheme: light;
-    --logo-bg: "../images/initial-black.png";
+    --logo-bg: url("../images/initial-black.png");
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-primary: #e5e7eb;
-        --text-secondary: #9ca3af;
-        --text-accent: #60a5fa;
-        --bg-primary: rgb(240 155 10);
-        --bg-secondary: #1f2937;
-        --border: #374151;
-        --shadow: rgba(0, 0, 0, 0.3);
-        --gradient-from: #ec4899;
-        --gradient-to: #8b5cf6;
         color-scheme: dark;
         --logo-bg: url("../images/initial-white.png");
     }
