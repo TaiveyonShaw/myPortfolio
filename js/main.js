@@ -21,6 +21,7 @@ function toggleTheme() {
     html.style.setProperty("--text-secondary", "#6b7280");
     html.style.setProperty("--text-accent", "#3b82f6");
     html.style.setProperty("--bg-primary", "#ffffff");
+    html.style.setProperty("--bg-secondary", "#f8e5d7");
     html.style.setProperty("--border", "#e5e7eb");
     html.style.setProperty("--shadow", "rgba(0, 0, 0, 0.1)");
     html.style.setProperty("--gradient-from", "#ec4899");
@@ -38,6 +39,7 @@ function toggleTheme() {
     html.style.setProperty("--text-secondary", "#9ca3af");
     html.style.setProperty("--text-accent", "#60a5fa");
     html.style.setProperty("--bg-primary", "#121212");
+    html.style.setProperty("--bg-secondary", "#202020");
     html.style.setProperty("--border", "#374151");
     html.style.setProperty("--shadow", "rgba(0, 0, 0, 0.3)");
     html.style.setProperty("--gradient-from", "#ec4899");
